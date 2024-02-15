@@ -23,7 +23,7 @@ const UsersList: React.FC = () => {
 
     useEffect(() => {
         if (page === numOfPages) setShowLoadMoreButton(false);
-    }, [users, numOfPages]);
+    }, [users, numOfPages, page]);
 
     return <>
         <Paper sx={{mt: 10}}>

@@ -23,7 +23,7 @@ const LoadMore: React.FC<Props> = ({setPage, page, setUsers}) => {
             setUsers(prev => [...prev, ...users]);
             setLoading(false);
         })()
-    }, [page]);
+    }, [page, setUsers]);
 
     return loading ? <div>Loading... </div> : (
         <Button onClick={handleClick} variant="contained" sx={{mt: 3, mb: 3}}>
